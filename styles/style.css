@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+:root {
+    --text-base: #afb6c2;
+    --text-title: #d4ccb6;
+    --background: #191816;
+    --form-background: #24221f;
+    --primary-color: #ffc632;
+  }
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+main{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+}
+ main .login {
+    width: 50%;
+    height: 100%;
+    background-color:  var(--background);
+}
+
+main .foto {
+    width: 50%;
+    height: 100%;
+    background-image: url("../images/side-image.jpg");
+    background-size: cover;
+    background-position: center bottom;
+
+}
+
+.login header {
+    margin: 1rem;
+}
+
+.login .form-box {
+
+    width: 70%;
+    height: 60%;
+    margin: 3rem auto ;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background:  var(--form-background);
+    font-family: Poppins;
+    color: var(--text-base);
+ 
+}
+
+
+.login .form-box .formulario  .title {
+
+    display: flex;
+    align-items: center;
+}
+.login .form-box .formulario  .title h1{
+
+    color: var(--text-title);
+    font-size: 1rem;
+    font-weight: 600;
+    margin: 0.5rem;
+}
+.login .form-box .formulario p {
+    color: var(--text-base);
+    font-size: 0.7rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+.login .form-box .formulario form .form-group label {
+
+    font-size: 0.7rem;
+    color: var(--text-base);
+    
+}
+
+.login .form-box .formulario form .form-group input[type="text"],
+.login .form-box .formulario form .form-group input[type="password"]
+{
+    background: none;
+    padding: 0.5rem;
+    border-radius: 6px;
+    width: 100%;
+    margin-bottom: 0.7rem;
+}
+.login .form-box .formulario form .form-group input[type="text"] {
+    display: block;
+    background-image: url("../images/mail.svg");
+    background-repeat: no-repeat;
+    background-position: left;
+    background-origin: content-box;
+    background-color: var(--form-background);
+    border: 2px solid #36332e;
+
+}
+.login .form-box .formulario form .form-group input[type="password"] {
+   display: block;
+   background-image: url("../images/lock.svg"),url("../images/eye.svg") ;
+   background-repeat: no-repeat;
+   background-position: left, right;
+   background-origin: content-box;
+   border: 2px solid #36332e;
+}
+
+.login .form-box .formulario form .form-group:last-child {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1rem;
+}
+.login .form-box .formulario form .form-group label {
+
+    font-size: 0.6rem;
+    margin:auto;
+    font-weight: 400;
+}
+.login .form-box .formulario form .form-group a{
+    text-decoration: none;
+    font-size: 0.7rem;
+    font-weight: 500;
+    margin-left: 2rem;
+    color: var(--primary-color)
+
+}
+
+.login .form-box .formulario form .form-group button {
+
+    width: 100%;
+    color: #24221f;
+    padding: 0.7rem;
+    border-radius: 6px;
+    border: none;
+    background-color: var(--primary-color);
+    font-weight: 600;
+    font-size: 0.8rem;
+    margin-top: 0.6rem;
+}
+.login .form-box .formulario form .form-group h4 {
+
+    font-size: 0.6rem;
+    color:var(--primary-color) ;
+    font-weight: 400;
+}
+
+.login .form-box .formulario form .form-group input[type="text"]:focus {
+    outline: 1px solid #ffc632;
+    background-image: url("../images/mail-focus.svg");
+}  
+
+.login .form-box .formulario form .form-group input[type="password"]:focus {
+    outline: 1px solid #ffc632;
+    background-image: url("../images/lock-focus.svg"), url("../images/eye.svg");
+
+}  
+.login .form-box .formulario form .form-group button:hover {
+    background-color: #ffd56a;
+    color: #302e2b;
+}
+@media(max-width:805px){
+    .login .form-box {
+        width: 80%;
+        height: 67%;
+    }
+}
+@media(max-width:615px){
+   body {
+       font-size: 50%;
+   }
+    main .foto {
+        display: none;
+    }
+    main .login {
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+        
+}
+@Media(max-width:400px) {
+
+    .login .form-box {
+        width: 85%;
+        height: 70%;
+    }
+}
